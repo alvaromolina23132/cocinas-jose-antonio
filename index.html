@@ -1,328 +1,992 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cocinas Jose Antonio | Carpintería en Lorquí</title>
-<meta name="description" content="Cocinas a medida en Lorquí, Murcia. Diseño, fabricación y montaje de cocinas con acabados de calidad.">
+
+<title>Cocinas José Antonio | Carpintería y reformas en Lorquí</title>
+
+<meta name="description" content="Cocinas José Antonio, carpintería y reformas a medida en Lorquí, Murcia. Cocinas, baños, armarios, puertas y otros trabajos personalizados.">
+
 <style>
-:root {
-  --dark: #292823;
-  --cream: #faf9f6;
-  --soft: #f0ede7;
-  --gold: #b79b78;
-  --muted: #817c72;
+:root{
+  --dark:#292823;
+  --cream:#faf9f6;
+  --soft:#f1eee8;
+  --gold:#b79b78;
+  --muted:#817c72;
+  --white:#ffffff;
 }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: var(--dark);
-  background: var(--cream);
+
+*{
+  box-sizing:border-box;
 }
-a { color: inherit; }
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 22px 7%;
-  border-bottom: 1px solid #e6e3dc;
-  background: var(--cream);
+
+html{
+  scroll-behavior:smooth;
 }
-.logo {
-  font-family: Georgia, serif;
-  font-size: 21px;
-  font-weight: bold;
+
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  color:var(--dark);
+  background:var(--cream);
 }
-.logo small {
-  display: block;
-  font-family: Arial, sans-serif;
-  font-size: 10px;
-  font-weight: normal;
-  letter-spacing: 3px;
-  color: #91816d;
-  margin-top: 5px;
+
+a{
+  color:inherit;
 }
-.navlinks { display: flex; gap: 28px; font-size: 13px; }
-.navlinks a { text-decoration: none; }
-.navlinks a:hover { color: var(--gold); }
-.hamb { display: none; }
-.hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 540px;
+
+/* =========================
+   NAVEGACIÓN
+========================= */
+
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 7%;
+  border-bottom:1px solid #e6e3dc;
+  background:var(--cream);
+  position:relative;
+  z-index:10;
 }
-.hero-copy {
-  padding: 70px 12%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+
+.logo{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
 }
-.eyebrow {
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #9a8064;
-  margin-bottom: 18px;
+
+.logo img{
+  width:175px;
+  max-height:75px;
+  object-fit:contain;
+  display:block;
 }
-h1, h2 {
-  font-family: Georgia, serif;
-  font-weight: normal;
+
+.navlinks{
+  display:flex;
+  align-items:center;
+  gap:28px;
+  font-size:13px;
 }
-h1 {
-  font-size: clamp(38px, 5vw, 68px);
-  line-height: 1.1;
-  margin: 0 0 24px;
+
+.navlinks a{
+  text-decoration:none;
 }
-.hero p {
-  font-size: 15px;
-  line-height: 1.9;
-  color: var(--muted);
-  max-width: 400px;
-  margin: 0 0 30px;
+
+.navlinks a:hover{
+  color:var(--gold);
 }
-.btn {
-  display: inline-block;
-  padding: 15px 23px;
-  background: #403e35;
-  color: white;
-  text-decoration: none;
-  font-size: 12px;
-  letter-spacing: .5px;
-  border: 0;
-  cursor: pointer;
+
+.nav-whatsapp{
+  padding:11px 16px;
+  background:#403e35;
+  color:white !important;
 }
-.btn:hover { background: #5d594d; }
-.hero-img {
-  min-height: 350px;
-  background: #ded8cd;
-  overflow: hidden;
+
+.nav-whatsapp:hover{
+  background:#5d594d;
 }
-.hero-img img {
-  width: 100%;
-  height: 100%;
-  min-height: 350px;
-  object-fit: cover;
-  display: block;
+
+.hamb{
+  display:none;
+  background:none;
+  border:1px solid #ddd6ca;
+  padding:9px;
+  font-size:18px;
+  cursor:pointer;
 }
-.section { padding: 85px 7%; }
-.center { text-align: center; }
-h2 { font-size: 40px; margin: 10px 0 15px; }
-.line { width: 38px; height: 2px; background: var(--gold); margin: 22px auto; }
-.muted {
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--muted);
-  max-width: 550px;
-  margin: auto;
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:570px;
 }
-.features {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  margin-top: 45px;
+
+.hero-copy{
+  padding:70px 12%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
 }
-.feature {
-  background: var(--soft);
-  padding: 35px 25px;
-  text-align: center;
+
+.eyebrow{
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#9a8064;
+  margin-bottom:18px;
 }
-.feature .num {
-  font-family: Georgia, serif;
-  font-size: 32px;
-  color: var(--gold);
+
+h1,h2{
+  font-family:Georgia,serif;
+  font-weight:normal;
 }
-.feature h3 { font-size: 15px; margin: 14px 0 10px; }
-.feature p { font-size: 13px; color: var(--muted); line-height: 1.8; }
-.projects {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 40px;
+
+h1{
+  font-size:clamp(40px,5vw,68px);
+  line-height:1.08;
+  margin:0 0 24px;
 }
-.project {
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  background: #ded8cd;
-  position: relative;
+
+.hero p{
+  font-size:15px;
+  line-height:1.9;
+  color:var(--muted);
+  max-width:470px;
+  margin:0 0 30px;
 }
-.project img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.project span {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  background: white;
-  padding: 8px 12px;
-  font-size: 12px;
+
+.btn{
+  display:inline-block;
+  padding:15px 23px;
+  background:#403e35;
+  color:white;
+  text-decoration:none;
+  font-size:12px;
+  letter-spacing:.5px;
+  border:0;
+  cursor:pointer;
 }
-.contact {
-  background: #403e35;
-  color: white;
-  text-align: center;
-  padding: 90px 7%;
+
+.btn:hover{
+  background:#5d594d;
 }
-.contact h2 { font-size: 42px; margin: 10px 0 20px; }
-.contact p { color: #d5d0c7; line-height: 1.8; margin-bottom: 30px; }
-.contact .btn { background: #d9c4a7; color: #292823; }
-footer {
-  padding: 25px 7%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-  font-size: 12px;
-  color: #8b867b;
+
+.hero-img{
+  min-height:400px;
+  background:#ded8cd;
+  overflow:hidden;
 }
-@media (max-width: 700px) {
-  .nav { padding: 18px 6%; }
-  .navlinks { display: none; flex-direction: column; gap: 15px; padding: 20px; background: var(--cream); position: absolute; right: 6%; top: 70px; border: 1px solid #ddd6ca; z-index: 5; }
-  .navlinks.open { display: flex; }
-  .hamb { display: block; background: none; border: 1px solid #ddd6ca; padding: 9px; font-size: 18px; cursor: pointer; }
-  .hero { grid-template-columns: 1fr; }
-  .hero-copy { padding: 55px 8%; }
-  .hero-img { min-height: 280px; }
-  .hero-img img { min-height: 280px; }
-  .section { padding: 60px 6%; }
-  h2 { font-size: 32px; }
-  .features { grid-template-columns: 1fr; gap: 15px; }
-  .projects { grid-template-columns: 1fr 1fr; gap: 10px; }
-  .contact { padding: 65px 6%; }
-  .contact h2 { font-size: 32px; }
-  footer { padding: 22px 6%; text-align: center; justify-content: center; }
+
+.hero-img img{
+  width:100%;
+  height:100%;
+  min-height:400px;
+  object-fit:cover;
+  display:block;
+}
+
+/* =========================
+   SECCIONES
+========================= */
+
+.section{
+  padding:85px 7%;
+}
+
+.center{
+  text-align:center;
+}
+
+h2{
+  font-size:40px;
+  margin:10px 0 15px;
+}
+
+.line{
+  width:38px;
+  height:2px;
+  background:var(--gold);
+  margin:22px auto;
+}
+
+.muted{
+  font-size:14px;
+  line-height:1.9;
+  color:var(--muted);
+  max-width:650px;
+  margin:auto;
+}
+
+/* =========================
+   SERVICIOS
+========================= */
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+  margin-top:45px;
+}
+
+.feature{
+  background:var(--soft);
+  padding:35px 20px;
+  text-align:center;
+  transition:transform .25s, box-shadow .25s;
+}
+
+.feature:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+.feature .num{
+  font-family:Georgia,serif;
+  font-size:30px;
+  color:var(--gold);
+}
+
+.feature h3{
+  font-size:15px;
+  margin:14px 0 10px;
+}
+
+.feature p{
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.8;
+}
+
+/* =========================
+   PROYECTOS
+========================= */
+
+.projects{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:40px;
+}
+
+.project{
+  aspect-ratio:1/1;
+  overflow:hidden;
+  background:#ded8cd;
+  position:relative;
+}
+
+.project img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .4s;
+}
+
+.project:hover img{
+  transform:scale(1.04);
+}
+
+.project span{
+  position:absolute;
+  bottom:15px;
+  left:15px;
+  background:white;
+  padding:8px 12px;
+  font-size:12px;
+}
+
+/* =========================
+   SOBRE NOSOTROS
+========================= */
+
+.about{
+  max-width:800px;
+  margin:auto;
+}
+
+.about p{
+  font-size:15px;
+  line-height:1.9;
+  color:var(--muted);
+  margin:0 0 15px;
+}
+
+/* =========================
+   LLAMADA A WHATSAPP
+========================= */
+
+.contact{
+  background:#403e35;
+  color:white;
+  text-align:center;
+  padding:90px 7%;
+}
+
+.contact h2{
+  font-size:42px;
+  margin:10px 0 20px;
+}
+
+.contact p{
+  color:#d5d0c7;
+  line-height:1.8;
+  margin-bottom:30px;
+}
+
+.contact .btn{
+  background:#d9c4a7;
+  color:#292823;
+}
+
+.contact .btn:hover{
+  background:#ead9c2;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  padding:25px 7%;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:12px;
+  font-size:12px;
+  color:#8b867b;
+}
+
+/* =========================
+   MÓVIL
+========================= */
+
+@media(max-width:900px){
+
+  .features{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+@media(max-width:700px){
+
+  .nav{
+    padding:15px 6%;
+  }
+
+  .logo img{
+    width:145px;
+    max-height:65px;
+  }
+
+  .navlinks{
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    padding:10px;
+    background:var(--cream);
+    position:absolute;
+    right:6%;
+    top:80px;
+    border:1px solid #ddd6ca;
+    z-index:20;
+    min-width:190px;
+  }
+
+  .navlinks.open{
+    display:flex;
+  }
+
+  .navlinks a{
+    padding:12px;
+  }
+
+  .nav-whatsapp{
+    text-align:center;
+  }
+
+  .hamb{
+    display:block;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+  }
+
+  .hero-copy{
+    padding:55px 8%;
+  }
+
+  .hero-img{
+    min-height:300px;
+  }
+
+  .hero-img img{
+    min-height:300px;
+  }
+
+  .section{
+    padding:60px 6%;
+  }
+
+  h2{
+    font-size:32px;
+  }
+
+  .features{
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+
+  .feature{
+    padding:25px 12px;
+  }
+
+  .projects{
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+
+  .contact{
+    padding:65px 6%;
+  }
+
+  .contact h2{
+    font-size:32px;
+  }
+
+  footer{
+    padding:22px 6%;
+    text-align:center;
+    justify-content:center;
+  }
+
+}
+
+@media(max-width:380px){
+
+  .features{
+    grid-template-columns:1fr;
+  }
+
+  .projects{
+    grid-template-columns:1fr;
+  }
+
 }
 </style>
 </head>
+
 <body>
 
+<!-- =========================
+     CABECERA
+========================= -->
+
 <header class="nav">
-  <a href="#" class="logo" style="text-decoration:none">
-    COCINAS JOSE ANTONIO
-    <small>CARPINTERÍA · LORQUÍ</small>
+
+  <a href="#" class="logo">
+    <img src="fotos/logo.png" alt="Cocinas José Antonio">
   </a>
-  <button class="hamb" id="menuBtn" aria-label="Abrir menú">☰</button>
+
+  <button
+    class="hamb"
+    id="menuBtn"
+    aria-label="Abrir menú"
+    aria-expanded="false">
+    ☰
+  </button>
+
   <nav class="navlinks" id="navLinks">
+
     <a href="#servicios">Servicios</a>
-    <a href="#proyectos">Proyectos</a>
+
+    <a href="#proyectos">Trabajos</a>
+
     <a href="#nosotros">Nosotros</a>
+
     <a href="#contacto">Contacto</a>
+
+    <a
+      class="nav-whatsapp"
+      href="https://wa.me/34669480804?text=Hola%2C%20quiero%20pedir%20presupuesto"
+      target="_blank"
+      rel="noopener">
+      WhatsApp
+    </a>
+
   </nav>
+
 </header>
 
+
 <main>
+
+<!-- =========================
+     PORTADA
+========================= -->
+
 <section class="hero">
+
   <div class="hero-copy">
-    <div class="eyebrow">Carpintería de cocinas · Murcia</div>
-    <h1>Cocinas, armarios, puertas y baños diseñados para adaptarse a tu espacio, tus necesidades y tu estilo..</h1>
-    <p> Diseñamos y realizamos soluciones de carpintería a medida: cocinas, armarios, puertas y baños, cuidando cada detalle para conseguir un resultado funcional, duradero y adaptado a tu hogar.</p>
-    <a href="#contacto" class="btn">SOLICITAR PRESUPUESTO →</a>
+
+    <div class="eyebrow">
+      Carpintería y reformas · Lorquí, Murcia
+    </div>
+
+    <h1>
+      Damos forma<br>
+      a tus espacios.
+    </h1>
+
+    <p>
+      Creamos soluciones a medida para tu hogar:
+      cocinas, baños, armarios, puertas y otros
+      trabajos de carpintería, cuidando cada detalle
+      para conseguir un resultado funcional y duradero.
+    </p>
+
+    <a href="#contacto" class="btn">
+      SOLICITAR PRESUPUESTO →
+    </a>
+
   </div>
+
   <div class="hero-img">
-    <!-- Cambia esta imagen por una foto real de tu padre -->
-    <img src="fotos/cocina-principal.jpg" alt="Cocina moderna realizada por Cocinas Jose Antonio">
+
+    <img
+      src="fotos/foto-01.jpg"
+      alt="Trabajo realizado por Cocinas José Antonio">
+
   </div>
+
 </section>
+
+
+<!-- =========================
+     SERVICIOS
+========================= -->
 
 <section class="section center" id="servicios">
-  <div class="eyebrow">Lo que hacemos</div>
-  <h2>Calidad en cada detalle</h2>
-  <div class="line"></div>
-  <p class="muted">Soluciones a medida para transformar tu cocina en un espacio único, funcional y duradero.</p>
-  <div class="features">
-    <article class="feature">
-      <div class="num">01</div>
-      <h3>Diseño a medida</h3>
-      <p>Diseñamos cada cocina pensando en tu espacio y tus necesidades.</p>
-    </article>
-    <article class="feature">
-      <div class="num">02</div>
-      <h3>Fabricación</h3>
-      <p>Carpintería cuidada con materiales seleccionados y acabados de calidad.</p>
-    </article>
-    <article class="feature">
-      <div class="num">03</div>
-      <h3>Montaje</h3>
-      <p>Instalación profesional y atención a cada detalle del proyecto.</p>
-    </article>
+
+  <div class="eyebrow">
+    Nuestros servicios
   </div>
+
+  <h2>
+    Soluciones para tu hogar
+  </h2>
+
+  <div class="line"></div>
+
+  <p class="muted">
+    Trabajamos cada proyecto de forma personalizada,
+    adaptándonos al espacio, al estilo y a las necesidades
+    de cada cliente.
+  </p>
+
+
+  <div class="features">
+
+    <article class="feature">
+
+      <div class="num">01</div>
+
+      <h3>
+        Cocinas
+      </h3>
+
+      <p>
+        Diseñamos y realizamos cocinas a medida,
+        adaptadas a cada espacio y estilo.
+      </p>
+
+    </article>
+
+
+    <article class="feature">
+
+      <div class="num">02</div>
+
+      <h3>
+        Baños
+      </h3>
+
+      <p>
+        Muebles y soluciones para crear baños
+        funcionales, modernos y personalizados.
+      </p>
+
+    </article>
+
+
+    <article class="feature">
+
+      <div class="num">03</div>
+
+      <h3>
+        Armarios
+      </h3>
+
+      <p>
+        Armarios a medida pensados para aprovechar
+        cada espacio de tu hogar.
+      </p>
+
+    </article>
+
+
+    <article class="feature">
+
+      <div class="num">04</div>
+
+      <h3>
+        Puertas y carpintería
+      </h3>
+
+      <p>
+        Puertas y otros trabajos de carpintería
+        realizados con atención a cada detalle.
+      </p>
+
+    </article>
+
+  </div>
+
 </section>
 
-<section class="section" id="proyectos" style="background:var(--soft)">
+
+<!-- =========================
+     TRABAJOS
+========================= -->
+
+<section
+  class="section"
+  id="proyectos"
+  style="background:var(--soft)"
+>
+
   <div class="center">
-    <div class="eyebrow">Nuestros trabajos</div>
-    <h2>Proyectos que inspiran</h2>
+
+    <div class="eyebrow">
+      Nuestros trabajos
+    </div>
+
+    <h2>
+      Proyectos realizados
+    </h2>
+
     <div class="line"></div>
-    <p class="muted">Una selección de nuestras cocinas a medida.</p>
+
+    <p class="muted">
+      Descubre algunos de los trabajos realizados
+      por Cocinas José Antonio.
+    </p>
+
   </div>
+
+
   <div class="projects">
+
     <div class="project">
-      <img src="fotos/cocina-1.jpg" alt="Proyecto de cocina a medida 1" loading="lazy">
-      <span>Cocina a medida</span>
+
+      <img
+        src="fotos/foto-01.jpg"
+        alt="Trabajo de carpintería"
+        loading="lazy">
+
+      <span>
+        Cocinas
+      </span>
+
     </div>
+
+
     <div class="project">
-      <img src="fotos/cocina-2.jpg" alt="Proyecto de cocina a medida 2" loading="lazy">
-      <span>Diseño moderno</span>
+
+      <img
+        src="fotos/foto-02.jpg"
+        alt="Cocina realizada a medida"
+        loading="lazy">
+
+      <span>
+        Cocinas a medida
+      </span>
+
     </div>
+
+
     <div class="project">
-      <img src="fotos/cocina-3.jpg" alt="Proyecto de cocina a medida 3" loading="lazy">
-      <span>Calidad y estilo</span>
+
+      <img
+        src="fotos/foto-03.jpg"
+        alt="Armario realizado a medida"
+        loading="lazy">
+
+      <span>
+        Armarios
+      </span>
+
     </div>
+
+
     <div class="project">
-      <img src="fotos/cocina-4.jpg" alt="Proyecto de cocina a medida 4" loading="lazy">
-      <span>Acabados elegantes</span>
+
+      <img
+        src="fotos/foto-04.jpg"
+        alt="Puerta realizada por Cocinas José Antonio"
+        loading="lazy">
+
+      <span>
+        Puertas
+      </span>
+
     </div>
+
+
     <div class="project">
-      <img src="fotos/cocina-5.jpg" alt="Proyecto de cocina a medida 5" loading="lazy">
-      <span>Carpintería personalizada</span>
+
+      <img
+        src="fotos/foto-05.jpg"
+        alt="Baño realizado a medida"
+        loading="lazy">
+
+      <span>
+        Baños
+      </span>
+
     </div>
+
+
     <div class="project">
-      <img src="fotos/cocina-6.jpg" alt="Proyecto de cocina a medida 6" loading="lazy">
-      <span>Cocinas con personalidad</span>
+
+      <img
+        src="fotos/foto-06.jpg"
+        alt="Trabajo personalizado"
+        loading="lazy">
+
+      <span>
+        Trabajos a medida
+      </span>
+
     </div>
+
+
+    <div class="project">
+
+      <img
+        src="fotos/foto-07.jpg"
+        alt="Trabajo de carpintería"
+        loading="lazy">
+
+      <span>
+        Carpintería
+      </span>
+
+    </div>
+
+
+    <div class="project">
+
+      <img
+        src="fotos/foto-08.jpg"
+        alt="Proyecto realizado"
+        loading="lazy">
+
+      <span>
+        Proyectos
+      </span>
+
+    </div>
+
+
+    <div class="project">
+
+      <img
+        src="fotos/foto-09.jpg"
+        alt="Trabajo realizado"
+        loading="lazy">
+
+      <span>
+        Otros trabajos
+      </span>
+
+    </div>
+
+
+    <div class="project">
+
+      <img
+        src="fotos/foto-10.jpg"
+        alt="Carpintería a medida"
+        loading="lazy">
+
+      <span>
+        A medida
+      </span>
+
+    </div>
+
+
+    <div class="project">
+
+      <img
+        src="fotos/foto-11.jpg"
+        alt="Proyecto personalizado"
+        loading="lazy">
+
+      <span>
+        Diseño personalizado
+      </span>
+
+    </div>
+
+
+    <div class="project">
+
+      <img
+        src="fotos/foto-12.jpg"
+        alt="Trabajo realizado por Cocinas José Antonio"
+        loading="lazy">
+
+      <span>
+        Trabajos realizados
+      </span>
+
+    </div>
+
   </div>
+
 </section>
+
+
+<!-- =========================
+     SOBRE NOSOTROS
+========================= -->
 
 <section class="section center" id="nosotros">
-  <div class="eyebrow">Sobre nosotros</div>
-  <h2>Tu cocina, nuestra pasión.</h2>
-  <div class="line"></div>
-  <p class="muted">En Cocinas José Antonio, en Lorquí (Murcia), creamos soluciones a medida para cada espacio de tu hogar.
 
-Realizamos cocinas, baños, armarios, puertas y otros trabajos de carpintería, cuidando la calidad, los acabados y cada detalle. Nos adaptamos a las necesidades de cada cliente para conseguir un resultado funcional, duradero y a su gusto.</p>
-  <p class="muted" style="margin-top:15px">Desde Lorquí, Murcia, damos forma a cocinas pensadas para durar y disfrutar.</p>
+  <div class="eyebrow">
+    Sobre nosotros
+  </div>
+
+  <h2>
+    Experiencia y dedicación
+  </h2>
+
+  <div class="line"></div>
+
+
+  <div class="about">
+
+    <p>
+      En Cocinas José Antonio, en Lorquí (Murcia),
+      creamos soluciones a medida para cada espacio
+      de tu hogar.
+    </p>
+
+    <p>
+      Realizamos cocinas, baños, armarios, puertas y
+      otros trabajos de carpintería, cuidando la calidad,
+      los acabados y cada detalle.
+    </p>
+
+    <p>
+      Nos adaptamos a las necesidades de cada cliente
+      para conseguir un resultado funcional, duradero
+      y a su gusto.
+    </p>
+
+  </div>
+
 </section>
+
+
+<!-- =========================
+     CONTACTO
+========================= -->
 
 <section class="contact" id="contacto">
-  <div class="eyebrow" style="color:#d8b991">Hablemos de tu cocina</div>
-  <h2>¿Tienes un proyecto en mente?</h2>
-  <p>Cuéntanos qué necesitas y te ayudamos a dar forma a la cocina de tus sueños.</p>
-  <!-- Sustituye el número por el WhatsApp real de la empresa -->
-  <a class="btn" href="https://wa.me/34XXXXXXXXX" target="_blank" rel="noopener">
+
+  <div
+    class="eyebrow"
+    style="color:#d8b991"
+  >
+    Hablemos de tu proyecto
+  </div>
+
+  <h2>
+    ¿Tienes algo en mente?
+  </h2>
+
+  <p>
+    Cuéntanos qué necesitas y te ayudaremos a
+    encontrar la mejor solución para tu hogar.
+  </p>
+
+  <a
+    class="btn"
+    href="https://wa.me/34669480804?text=Hola%2C%20quiero%20pedir%20presupuesto"
+    target="_blank"
+    rel="noopener">
+
     CONTACTAR POR WHATSAPP →
+
   </a>
+
 </section>
+
 </main>
 
+
+<!-- =========================
+     PIE DE PÁGINA
+========================= -->
+
 <footer>
-  <span>© 2026 Cocinas Jose Antonio</span>
-  <span>Lorquí · Murcia</span>
+
+  <span>
+    © 2026 Cocinas José Antonio
+  </span>
+
+  <span>
+    Lorquí · Murcia
+  </span>
+
 </footer>
 
+
 <script>
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
+
+const menuBtn =
+  document.getElementById("menuBtn");
+
+const navLinks =
+  document.getElementById("navLinks");
+
 
 menuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
+
+  const open =
+    navLinks.classList.toggle("open");
+
+  menuBtn.setAttribute(
+    "aria-expanded",
+    String(open)
+  );
+
 });
 
-navLinks.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
+
+navLinks
+  .querySelectorAll("a")
+  .forEach(link => {
+
+    link.addEventListener("click", () => {
+
+      navLinks.classList.remove("open");
+
+      menuBtn.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+    });
+
   });
-});
+
 </script>
+
 </body>
 </html>
